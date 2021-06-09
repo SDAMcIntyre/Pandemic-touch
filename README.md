@@ -10,6 +10,9 @@ The location question is there several times since that was the only way to make
 
 ## Data processing steps
 
-- exclude those who did not give consent
+- exclude those who did not give consent (7 excluded)
 
-- set data to NA for Q11 and Q50 when language is Danish and time < 12:15 9th Nov 2020 (NOT DONE YET)
+- exclude those who did not finish the survey (168 exlcuded, too strict?)
+
+- set data to NA for Q11 and Q50 when language is Danish and time < 12:15 9th Nov 2020 (8 excluded)
+
