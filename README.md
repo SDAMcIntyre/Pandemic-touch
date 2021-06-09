@@ -16,3 +16,4 @@ The location question is there several times since that was the only way to make
 
 - set data to NA for Q11 and Q50 when language is Danish and time < 12:15 9th Nov 2020 (8 excluded)
 
+- calculate age from year of birth and survey completion year
