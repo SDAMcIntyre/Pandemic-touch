@@ -173,13 +173,32 @@ pre code {
 <p>9th November 2020: issues with Danish language survey, questions Q11 and Q50. Ignore Danish respondents’ responses prior to this. Fix published at 12:15 Swedish time.</p>
 <p>23rd March 2021, 16:16 CET: added question about vaccinations (own and household members’) to the survey in all languages.</p>
 <p>The location question is there several times since that was the only way to make the alphabetisation of countries to make sense in different language settings. Participants only saw one of those depending on their language setting.</p>
+<p>Apparent duplicate questions:</p>
+<ul>
+<li><p>Q20 is shown to people who live alone, Q65 is shown to people who do NOT live alone</p></li>
+<li><p>Q21 is shown to people who live alone, Q66 is shown to people who do NOT live alone</p></li>
+<li><p>Q22 is shown to people who live alone, Q67 is shown to people who do NOT live alone</p></li>
+<li><p>Q45 is shown to people who do NOT live alone, Q63 is shown to people who live alone</p></li>
+</ul>
+<p>Q27 scale: no!, no, more or less, yes, yes!</p>
 </div>
 <div id="data-processing-steps" class="section level2">
 <h2>Data processing steps</h2>
 <ul>
-<li><p>exclude those who did not give consent</p></li>
-<li><p>set data to NA for Q11 and Q50 when language is Danish and time &lt; 12:15 9th Nov 2020 (NOT DONE YET)</p></li>
+<li><p>exclude those who did not give consent (7 excluded)</p></li>
+<li><p>exclude those who did not finish the survey (168 exlcuded, too strict?)</p></li>
+<li><p>set data to NA for Q11 and Q50 when language is Danish and time &lt; 12:15 9th Nov 2020 (8 cases)</p></li>
+<li><p>calculate age from year of birth and survey completion year</p></li>
 </ul>
+<div id="to-do" class="section level3">
+<h3>To do</h3>
+<ul>
+<li><p>translate and merge country of residence questions</p></li>
+<li><p>merge duplicate questions for those living alone/not alone</p></li>
+<li><p>recode ordinal scales as factors with the correct order</p></li>
+<li><p>do something with free-text options</p></li>
+</ul>
+</div>
 </div>
 </div>
 
