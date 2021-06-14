@@ -1,0 +1,217 @@
+StartDate;Start Date;"{""ImportId"":""startDate"",""timeZone"":""Europe/Berlin""}";Start Date
+EndDate;End Date;"{""ImportId"":""endDate"",""timeZone"":""Europe/Berlin""}";End Date
+Status;Response Type;"{""ImportId"":""status""}";Response Type
+Progress;Progress;"{""ImportId"":""progress""}";Progress
+Duration (in seconds);Duration (in seconds);"{""ImportId"":""duration""}";Duration (seconds)
+Finished;Finished;"{""ImportId"":""finished""}";Finished
+RecordedDate;Recorded Date;"{""ImportId"":""recordedDate"",""timeZone"":""Europe/Berlin""}";Recorded Date
+ResponseId;Response ID;"{""ImportId"":""_recordId""}";Response ID
+DistributionChannel;Distribution Channel;"{""ImportId"":""distributionChannel""}";Distribution Channel
+UserLanguage;User Language;"{""ImportId"":""userLanguage""}";User Language
+Q55;"1.   I understand that my participation is voluntary and that I am free to withdraw at any time without giving any reason and without penalty. I can withdraw from the study by exiting the website at any point. If I do so before completing the final page, it will be assumed that I do not wish to take part in the study, and all my answers will be deleted.
+ 
+
+2.  I understand that data collected during the study may be looked at and analysed by authorized individuals from the University of Oslo and LinkÌ¦ping University. 
+ 
+
+3. I understand that the collected anonymous data can be shared with other researchers.
+ 
+
+4.  I agree to take part in the above study, and by continuing with the task I acknowledge that I am formally agreeing to this.";"{""ImportId"":""QID55""}";Consent
+Q5;What year were you born?;"{""ImportId"":""QID3_TEXT""}";Year of Birth
+Q1;What gender do you identify as?;"{""ImportId"":""QID1""}";Gender
+Q3;List of Countries;"{""ImportId"":""QID2""}";Residence (English)
+Q62;Hvilket land er du for tiden bosatt i?;"{""ImportId"":""QID62""}";Residence (Norwegian)
+Q56;MissÌ_ maassa asut nyt?;"{""ImportId"":""QID56""}";Residence (Finnish)
+Q59;Vilket land Ì_r du fÌ¦r nÌ_rvarande bosatt i?;"{""ImportId"":""QID59""}";Residence (Swedish)
+Q64;I hvilket land er du for nuvÌ_rende bosat i?;"{""ImportId"":""QID64""}";Residence (Danish)
+Q6;Did you mainly grow up in the country you are living in now?;"{""ImportId"":""QID4""}";Grew Up Where You Live
+Q12;What is the highest level of regulation that currently applies in your country with respect to social interaction? Please select the answer which best reflects the level of regulations in your country of residence.;"{""ImportId"":""QID10""}";Strictest Regulation
+Q46_1;"How would you describe your political leaning?
+
+Please move the slider on the line to the point that best corresponds to your opinion.";"{""ImportId"":""QID46_1""}";Political Leaning
+Q8;How many people do you live with (excluding pets)?;"{""ImportId"":""QID6""}";Number Cohabiting
+Q10;Tell us about their connection to you. Please select all that apply;"{""ImportId"":""QID8""}";Relationship to Cohabitants
+Q9;Do you live with pets?;"{""ImportId"":""QID7""}";Pets
+Q14;Are you.. - Selected Choice;"{""ImportId"":""QID12""}";Occupation
+Q14_6_TEXT;Are you.. - Other, please specify - Text;"{""ImportId"":""QID12_6_TEXT""}";Occupation Other
+Q15;Are the people you live with... (please select all that apply) - Selected Choice;"{""ImportId"":""QID13""}";Occ. Household
+Q15_6_TEXT;Are the people you live with... (please select all that apply) - Other, please specify - Text;"{""ImportId"":""QID13_6_TEXT""}";Occ. Household Other
+Q11_1;"How much have you been socially distancing for the past week?
+
+Please move the slider on the line to the point that best corresponds to your situation.";"{""ImportId"":""QID9_1""}";Soc. Dist. Past Week
+Q17_1;Are you socially distancing more or less than your local government recommends? Please move the slider on the line to the point that best corresponds to your situation.;"{""ImportId"":""QID15_1""}";Soc. Dist. Rel. Recommended
+Q18;"If you have been socially distancing, how many days have you done so at this level? Otherwise write ""0"".";"{""ImportId"":""QID16_TEXT""}";Soc. Dist. N. Days
+Q28_1;What do you think of the measures your government has put in place? Please move the slider on the line to the point that best corresponds to your opinion.;"{""ImportId"":""QID26_1""}";Opinion on Regulations
+Q25;Have you or has someone in your household had flu symptoms in the past week?;"{""ImportId"":""QID23""}";Househ. Symptoms Past Week
+Q68;Have you had Covid-19?;"{""ImportId"":""QID68""}";Had COVID-19
+Q69;Has someone you live with had Covid-19?;"{""ImportId"":""QID69""}";COVID-19 Household
+Q71;Have you received a vaccination against Covid-19?;"{""ImportId"":""QID71""}";Vaccinated
+Q72;Have the people you live with received vaccination against Covid-19? Please select all that apply to your situation;"{""ImportId"":""QID72""}";Vaccinated Household
+Q19;Do you touch your pets in the following ways?;"{""ImportId"":""QID17""}";Had Touch pets
+Q20_1;How much touch have you had in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID18_2""}";Had Touch Someone Close 1
+Q20_2;How much touch have you had in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID18_3""}";Had Touch Stranger 1
+Q20_3;How much touch have you had in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID18_4""}";Had Touch Professional 1
+Q65_1;How much touch have you had in the past week? Please select the option which best matches your situation. - From someone you live with;"{""ImportId"":""QID65_1""}";Had Touch Cohabitant
+Q65_2;How much touch have you had in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID65_2""}";Had Touch Someone Close 2
+Q65_3;How much touch have you had in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID65_3""}";Had Touch Stranger 2
+Q65_4;How much touch have you had in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID65_4""}";Had Touch Professional 2
+Q21_1;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID19_2""}";Wanted Touch Someone Close 1
+Q21_2;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID19_3""}";Wanted Touch Stranger 1
+Q21_3;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID19_4""}";Wanted Touch Professional 1
+Q66_1;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone you live with;"{""ImportId"":""QID66_1""}";Wanted Touch Cohabitant
+Q66_2;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID66_2""}";Wanted Touch Someone Close 2
+Q66_3;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID66_3""}";Wanted Touch Stranger 2
+Q66_4;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID66_4""}";Wanted Touch Professional 2
+Q22_1;On a typical week prior to the current pandemic, how much touch would you have received? - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID20_2""}";Typical Touch Someone Close 1
+Q22_2;On a typical week prior to the current pandemic, how much touch would you have received? - Someone you don't know;"{""ImportId"":""QID20_3""}";Typical Touch Stranger 1
+Q22_3;On a typical week prior to the current pandemic, how much touch would you have received? - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID20_4""}";Typical Touch Professional 1
+Q67_1;On a typical week prior to the current pandemic, how much touch would you have received? - From someone you live with;"{""ImportId"":""QID67_1""}";Typical Touch Cohabitant
+Q67_2;On a typical week prior to the current pandemic, how much touch would you have received? - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID67_2""}";Typical Touch Someone Close 2
+Q67_3;On a typical week prior to the current pandemic, how much touch would you have received? - Someone you don't know;"{""ImportId"":""QID67_3""}";Typical Touch Stranger 2
+Q67_4;On a typical week prior to the current pandemic, how much touch would you have received? - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID67_4""}";Typical Touch Professional 2
+Q49_4;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
+ Please move the slider on the line to the point that best corresponds to your opinion. - Go for a walk outside, just the two of you";"{""ImportId"":""QID49_4""}";Want Activity Walk
+Q49_5;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
+ Please move the slider on the line to the point that best corresponds to your opinion. - Dinner at your friend's place, just your household and their household";"{""ImportId"":""QID49_5""}";Want Activity Dinner Party
+Q49_6;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
+ Please move the slider on the line to the point that best corresponds to your opinion. - Brunch at a friend's place with around 10 people";"{""ImportId"":""QID49_6""}";Want Activity Brunch
+Q49_7;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
+ Please move the slider on the line to the point that best corresponds to your opinion. - Coffee and a chat at an outside serving area";"{""ImportId"":""QID49_7""}";Want Activity Coffee outside
+Q49_8;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
+ Please move the slider on the line to the point that best corresponds to your opinion. - Dinner at a fully booked restaurant";"{""ImportId"":""QID49_8""}";Want Activity Restaurant
+Q49_9;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
+ Please move the slider on the line to the point that best corresponds to your opinion. - Dancing in a nightclub";"{""ImportId"":""QID49_9""}";Want Activity Nightclub
+Q50_12;"A friend of yours invites you to join them for an activity in the upcoming week. Do you think you would join them? 
+Please move the slider on the line to the point that describes what you think you would do. If the activity is not possible in the country you are living in right now, please select ""not possible - Go for a walk outside, just the two of you";"{""ImportId"":""QID50_12""}";Would Do Activity Walk
+Q50_13;"A friend of yours invites you to join them for an activity in the upcoming week. Do you think you would join them? 
+Please move the slider on the line to the point that describes what you think you would do. If the activity is not possible in the country you are living in right now, please select ""not possible - Dinner at your friend's place, just your household and their household";"{""ImportId"":""QID50_13""}";Would Do Activity Dinner Party
+Q50_14;"A friend of yours invites you to join them for an activity in the upcoming week. Do you think you would join them? 
+Please move the slider on the line to the point that describes what you think you would do. If the activity is not possible in the country you are living in right now, please select ""not possible - Brunch at a friend's place with around 10 people";"{""ImportId"":""QID50_14""}";Would Do Activity Brunch
+Q50_15;"A friend of yours invites you to join them for an activity in the upcoming week. Do you think you would join them? 
+Please move the slider on the line to the point that describes what you think you would do. If the activity is not possible in the country you are living in right now, please select ""not possible - Coffee and a chat at an outside serving area";"{""ImportId"":""QID50_15""}";Would Do Activity Coffee outside
+Q50_16;"A friend of yours invites you to join them for an activity in the upcoming week. Do you think you would join them? 
+Please move the slider on the line to the point that describes what you think you would do. If the activity is not possible in the country you are living in right now, please select ""not possible - Dinner at a fully booked restaurant";"{""ImportId"":""QID50_16""}";Would Do Activity Restaurant
+Q50_17;"A friend of yours invites you to join them for an activity in the upcoming week. Do you think you would join them? 
+Please move the slider on the line to the point that describes what you think you would do. If the activity is not possible in the country you are living in right now, please select ""not possible - Dancing in a nightclub";"{""ImportId"":""QID50_17""}";Would Do Activity Nightclub
+Q52_1;"How much would you like to use the following services (assuming it was possible)? 
+Please move the slider on the line to the point that best corresponds to your opinion. - Massage";"{""ImportId"":""QID52_1""}";Want Service Massage
+Q52_2;"How much would you like to use the following services (assuming it was possible)? 
+Please move the slider on the line to the point that best corresponds to your opinion. - Cosmetologist";"{""ImportId"":""QID52_2""}";Want Service Cosmetologist
+Q52_3;"How much would you like to use the following services (assuming it was possible)? 
+Please move the slider on the line to the point that best corresponds to your opinion. - Hairdresser/barber";"{""ImportId"":""QID52_3""}";Want Service Hairdresser
+Q53_1;"How likely would you book a time & use the gift card to these services this week assuming the gift card expires and cannot be used after this week? 
+Please move the slider on the line to the point that describes what you think you would do. If the service providers are not open for business in your country right now, please select ""not possible."" - Massage";"{""ImportId"":""QID53_1""}";Would Do Service Massage
+Q53_2;"How likely would you book a time & use the gift card to these services this week assuming the gift card expires and cannot be used after this week? 
+Please move the slider on the line to the point that describes what you think you would do. If the service providers are not open for business in your country right now, please select ""not possible."" - Cosmetologist";"{""ImportId"":""QID53_2""}";Would Do Service Cosmetologist
+Q53_3;"How likely would you book a time & use the gift card to these services this week assuming the gift card expires and cannot be used after this week? 
+Please move the slider on the line to the point that describes what you think you would do. If the service providers are not open for business in your country right now, please select ""not possible."" - Hairdresser/barber";"{""ImportId"":""QID53_3""}";Would Do Service Hairdresser
+Q24_1;How well do the following statements describe your personality? I see myself as someone who... - is reserved;"{""ImportId"":""QID22_1""}";Personality Reserved
+Q24_2;How well do the following statements describe your personality? I see myself as someone who... - is generally trusting;"{""ImportId"":""QID22_2""}";Personality Trusting
+Q24_3;How well do the following statements describe your personality? I see myself as someone who... - tends to be lazy;"{""ImportId"":""QID22_3""}";Personality Lazy
+Q24_4;How well do the following statements describe your personality? I see myself as someone who... - is relaxed‰Û_ handles stress well;"{""ImportId"":""QID22_4""}";Personality Relaxed
+Q24_5;How well do the following statements describe your personality? I see myself as someone who... - has few artistic interests;"{""ImportId"":""QID22_5""}";Personality Not Artistic
+Q24_6;How well do the following statements describe your personality? I see myself as someone who... - is outgoing‰Û_ sociable;"{""ImportId"":""QID22_6""}";Personality Outgoing
+Q24_7;How well do the following statements describe your personality? I see myself as someone who... - tends to find fault with others;"{""ImportId"":""QID22_7""}";Personality Fault Others
+Q24_8;How well do the following statements describe your personality? I see myself as someone who... - does a thorough job;"{""ImportId"":""QID22_8""}";Personality Thorough
+Q24_9;How well do the following statements describe your personality? I see myself as someone who... - gets nervous easily;"{""ImportId"":""QID22_9""}";Personality Nervous
+Q24_10;How well do the following statements describe your personality? I see myself as someone who... - has an active imagination;"{""ImportId"":""QID22_10""}";Personality Imaginative
+Q27_1;"Please
+indicate for each of the following 6 statements, the extent to which
+they apply to your situation, the
+way you feel now. - I experience a general sense of emptiness";"{""ImportId"":""QID25_1""}";Feel Emptiness
+Q27_2;"Please
+indicate for each of the following 6 statements, the extent to which
+they apply to your situation, the
+way you feel now. - I miss having people around me";"{""ImportId"":""QID25_2""}";Feel Miss People
+Q27_3;"Please
+indicate for each of the following 6 statements, the extent to which
+they apply to your situation, the
+way you feel now. - I often feel rejected";"{""ImportId"":""QID25_3""}";Feel Rejected
+Q27_4;"Please
+indicate for each of the following 6 statements, the extent to which
+they apply to your situation, the
+way you feel now. - There are plenty of people I can rely on when I have problems";"{""ImportId"":""QID25_4""}";Feel Can Rely
+Q27_5;"Please
+indicate for each of the following 6 statements, the extent to which
+they apply to your situation, the
+way you feel now. - There are many people I can trust completely";"{""ImportId"":""QID25_5""}";Feel Can Trust
+Q27_6;"Please
+indicate for each of the following 6 statements, the extent to which
+they apply to your situation, the
+way you feel now. - There are enough people I feel close to";"{""ImportId"":""QID25_6""}";Feel Close People
+Q26_1;Over the past week, how would you judge your physical and mental health? - Physical health;"{""ImportId"":""QID24_1""}";Physical Health
+Q26_2;Over the past week, how would you judge your physical and mental health? - mental health;"{""ImportId"":""QID24_2""}";Mental Health
+Q45_1;How worried are you... - about getting COVID-19?;"{""ImportId"":""QID45_1""}";Worried Getting COVID19 1
+Q45_2;How worried are you... - about someone you live with getting COVID-19?;"{""ImportId"":""QID45_2""}";Worried Cohabitant COVID19
+Q45_3;How worried are you... - about transmitting COVID-19 to someone?;"{""ImportId"":""QID45_3""}";Worried Transmitting COVID19 1
+Q63_1;How worried are you... - about getting COVID-19?;"{""ImportId"":""QID63_1""}";Worried Getting COVID19 2
+Q63_3;How worried are you... - about transmitting COVID-19 to someone?;"{""ImportId"":""QID63_3""}";Worried Transmitting COVID19 2
+Q30_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID28_1""}";Touch Attention Cohab Partner
+Q30_2;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - A child under 12;"{""ImportId"":""QID28_2""}";Touch Attention Cohab Child
+Q30_3;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID28_3""}";Touch Attention Cohab Friend
+Q30_4;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other family (e.g. parent, step-sibling);"{""ImportId"":""QID28_4""}";Touch Attention Cohab Family
+Q30_5;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other non-family (e.g. carer, flat-mate);"{""ImportId"":""QID28_5""}";Touch Attention Cohab Other
+Q31_1;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID29_1""}";Touch Attention Non-Cohab Partner
+Q31_2;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a child under 12 that you are close to;"{""ImportId"":""QID29_2""}";Touch Attention Non-Cohab Child
+Q31_3;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID29_3""}";Touch Attention Non-Cohab Friend
+Q31_4;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other family (e.g. grandparent);"{""ImportId"":""QID29_6""}";Touch Attention Non-Cohab Family
+Q31_5;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other non-family (e.g. colleague);"{""ImportId"":""QID29_4""}";Touch Attention Non-Cohab Other
+Q31_6;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a stranger your age with the same gender presentation as you;"{""ImportId"":""QID29_5""}";Touch Attention Non-Cohab Stranger
+Q43_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID43_1""}";Touch Gratitude Cohab Partner
+Q43_2;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - A child under 12;"{""ImportId"":""QID43_2""}";Touch Gratitude Cohab Child
+Q43_3;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID43_3""}";Touch Gratitude Cohab Friend
+Q43_4;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other family (e.g. parent, step-sibling);"{""ImportId"":""QID43_4""}";Touch Gratitude Cohab Family
+Q43_5;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other non-family (e.g. carer, flat-mate);"{""ImportId"":""QID43_5""}";Touch Gratitude Cohab Other
+Q44_1;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID44_1""}";Touch Gratitude Non-Cohab Partner
+Q44_2;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a child under 12 that you are close to;"{""ImportId"":""QID44_2""}";Touch Gratitude Non-Cohab Child
+Q44_3;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID44_3""}";Touch Gratitude Non-Cohab Friend
+Q44_4;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other family (e.g. grandparent);"{""ImportId"":""QID44_6""}";Touch Gratitude Non-Cohab Family
+Q44_5;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other non-family (e.g. colleague);"{""ImportId"":""QID44_4""}";Touch Gratitude Non-Cohab Other
+Q44_6;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a stranger your age with the same gender presentation as you;"{""ImportId"":""QID44_5""}";Touch Gratitude Non-Cohab Stranger
+Q40_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID40_1""}";Touch Calming Cohab Partner
+Q40_2;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - A child under 12;"{""ImportId"":""QID40_2""}";Touch Calming Cohab Child
+Q40_3;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID40_3""}";Touch Calming Cohab Friend
+Q40_4;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other family (e.g. parent, step-sibling);"{""ImportId"":""QID40_4""}";Touch Calming Cohab Family
+Q40_5;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other non-family (e.g. carer, flat-mate);"{""ImportId"":""QID40_5""}";Touch Calming Cohab Other
+Q41_1;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID41_1""}";Touch Calming Non-Cohab Partner
+Q41_2;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a child under 12 that you are close to;"{""ImportId"":""QID41_2""}";Touch Calming Non-Cohab Child
+Q41_3;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID41_3""}";Touch Calming Non-Cohab Friend
+Q41_4;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other family (e.g. grandparent);"{""ImportId"":""QID41_6""}";Touch Calming Non-Cohab Family
+Q41_5;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other non-family (e.g. colleague);"{""ImportId"":""QID41_4""}";Touch Calming Non-Cohab Other
+Q41_6;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a stranger;"{""ImportId"":""QID41_5""}";Touch Calming Non-Cohab Stranger
+Q37_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID37_1""}";Touch Sadness Cohab Partner
+Q37_2;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - A child under 12;"{""ImportId"":""QID37_2""}";Touch Sadness Cohab Child
+Q37_3;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID37_3""}";Touch Sadness Cohab Friend
+Q37_4;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other family (e.g. parent, step-sibling);"{""ImportId"":""QID37_4""}";Touch Sadness Cohab Family
+Q37_5;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other non-family (e.g. carer, flat-mate);"{""ImportId"":""QID37_5""}";Touch Sadness Cohab Other
+Q38_1;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID38_1""}";Touch Sadness Non-Cohab Partner
+Q38_2;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a child under 12 that you are close to;"{""ImportId"":""QID38_2""}";Touch Sadness Non-Cohab Child
+Q38_3;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID38_3""}";Touch Sadness Non-Cohab Friend
+Q38_4;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other family (e.g. grandparent);"{""ImportId"":""QID38_6""}";Touch Sadness Non-Cohab Family
+Q38_5;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other non-family (e.g. colleague);"{""ImportId"":""QID38_4""}";Touch Sadness Non-Cohab Other
+Q38_6;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a stranger your age with the same gender presentation as you;"{""ImportId"":""QID38_5""}";Touch Sadness Non-Cohab Stranger
+Q34_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID34_1""}";Touch Happiness Cohab Partner
+Q34_2;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - A child under 12;"{""ImportId"":""QID34_2""}";Touch Happiness Cohab Child
+Q34_3;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID34_3""}";Touch Happiness Cohab Friend
+Q34_4;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other family (e.g. parent, step-sibling);"{""ImportId"":""QID34_4""}";Touch Happiness Cohab Family
+Q34_5;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other non-family (e.g. carer, flat-mate);"{""ImportId"":""QID34_5""}";Touch Happiness Cohab Other
+Q35_1;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID35_1""}";Touch Happiness Non-Cohab Partner
+Q35_2;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a child under 12 that you are close to;"{""ImportId"":""QID35_2""}";Touch Happiness Non-Cohab Child
+Q35_3;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID35_3""}";Touch Happiness Non-Cohab Friend
+Q35_4;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other family (e.g. grandparent);"{""ImportId"":""QID35_6""}";Touch Happiness Non-Cohab Family
+Q35_5;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other non-family (e.g. colleague);"{""ImportId"":""QID35_4""}";Touch Happiness Non-Cohab Other
+Q35_6;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a stranger your age with the same gender presentation as you;"{""ImportId"":""QID35_5""}";Touch Happiness Non-Cohab Stranger
+Love_Q31_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID31_1""}";Touch Love Cohab Partner
+Love_Q31_2;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - A child under 12;"{""ImportId"":""QID31_2""}";Touch Love Cohab Child
+Love_Q31_3;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID31_3""}";Touch Love Cohab Friend
+Love_Q31_4;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other family (e.g. parent, step-sibling);"{""ImportId"":""QID31_4""}";Touch Love Cohab Family
+Love_Q31_5;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - other non-family (e.g. carer, flat-mate);"{""ImportId"":""QID31_5""}";Touch Love Cohab Other
+Love_Q32_1;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID32_1""}";Touch Love Non-Cohab Partner
+Love_Q32_2;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a child under 12 that you are close to;"{""ImportId"":""QID32_2""}";Touch Love Non-Cohab Child
+Love_Q32_3;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a friend;"{""ImportId"":""QID32_3""}";Touch Love Non-Cohab Friend
+Love_Q32_4;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other family (e.g. grandparent);"{""ImportId"":""QID32_6""}";Touch Love Non-Cohab Family
+Love_Q32_5;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - other non-family (e.g. colleague);"{""ImportId"":""QID32_4""}";Touch Love Non-Cohab Other
+Love_Q32_6;At the moment, how much would you like it if any of these people who do not live with you touched you in this way?  (Please imagine a person if one does not exist) - a stranger your age with the same gender presentation as you;"{""ImportId"":""QID32_5""}";Touch Love Non-Cohab Stranger
+Q_Language;Q_Language;"{""ImportId"":""Q_Language""}";Language
+FL_12_DO;FL_12 - Block Randomizer - Display Order;"{""ImportId"":""FL_12_DO""}";Touch Order
