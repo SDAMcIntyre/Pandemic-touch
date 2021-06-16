@@ -13,6 +13,12 @@ reorder_ordinals <- function(df) {
                                              'approx once a day', 
                                              '2-5 times per day',
                                              '6-10 times per day',
-                                             'More than 10 times a day')))
+                                             'More than 10 times a day'))),
+      
+      across(.cols = contains(c('Attention', 'Gratitude', 'Calming', 'Sadness','Happiness', 'Love')),
+             .fns = ~ factor(.x, levels = c('I would dislike it',
+                                            'I don\'t mind',
+                                            'I would like it',
+                                            'I don\'t know / not applicable')))
     )
 }
