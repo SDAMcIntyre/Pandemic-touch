@@ -20,7 +20,7 @@ Apparent duplicate questions:
 
 Q27 scale: no!, no, more or less, yes, yes!
 
-## Data processing steps
+## Data processing steps in process_data.R
 
 - merge country of residence questions 
 
@@ -34,8 +34,23 @@ Q27 scale: no!, no, more or less, yes, yes!
 
 - calculate age from year of birth and survey completion year
 
-### To do
+- collapse n. cohabiting categories: 4, 5, > 5 to > 3 (n = 24, 4 and 5)
 
 - recode ordinal scales as factors with the correct order
+    + Number Cohabiting
+    + Wanted Touch ...
+
+### To do
+
+- recode more ordinal scales as factors with the correct order
 
 - do something with free-text options
+
+## Analysis 
+Planned analyses: https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit 
+
+- analysis_cohabitation-and-wanting-touch.R: Individuals living alone during lockdowns will be more lonely and touch-hungry than those living with others (but may also be experiencing less unwanted touch)
+
+### To do
+
+- video-related questions (especially live alone / with someone comparisons, but also others)

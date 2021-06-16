@@ -182,9 +182,11 @@ pre code {
 </ul>
 <p>Q27 scale: no!, no, more or less, yes, yes!</p>
 </div>
-<div id="data-processing-steps" class="section level2">
-<h2>Data processing steps</h2>
+<div id="data-processing-steps-in-process_data.r" class="section level2">
+<h2>Data processing steps in process_data.R</h2>
 <ul>
+<li><p>merge country of residence questions</p></li>
+<li><p>merge duplicate questions for those living alone/not alone</p></li>
 <li><p>exclude those who did not give consent (7 excluded)</p></li>
 <li><p>exclude those who did not finish the survey (168 exlcuded, too strict?)</p></li>
 <li><p>set data to NA for Q11 and Q50 when language is Danish and time &lt; 12:15 9th Nov 2020 (8 cases)</p></li>
@@ -193,10 +195,24 @@ pre code {
 <div id="to-do" class="section level3">
 <h3>To do</h3>
 <ul>
-<li><p>translate and merge country of residence questions</p></li>
-<li><p>merge duplicate questions for those living alone/not alone</p></li>
-<li><p>recode ordinal scales as factors with the correct order</p></li>
-<li><p>do something with free-text options</p></li>
+<li>do something with free-text options</li>
+</ul>
+</div>
+</div>
+<div id="analysis-in-analyse_data.r" class="section level2">
+<h2>Analysis in analyse_data.R</h2>
+<p>Planned analyses: <a href="https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit" class="uri">https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit</a></p>
+<ul>
+<li>recode ordinal scales as factors with the correct order
+<ul>
+<li>Number Cohabiting</li>
+</ul></li>
+</ul>
+<div id="to-do-1" class="section level3">
+<h3>To do</h3>
+<ul>
+<li><p>Individuals living alone during lockdowns will be more lonely and touch-hungry than those living with others (but may also be experiencing less unwanted touch)</p></li>
+<li><p>video-related questions (especially live alone / with someone comparisons, but also others)</p></li>
 </ul>
 </div>
 </div>

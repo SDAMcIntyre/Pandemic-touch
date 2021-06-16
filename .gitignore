@@ -42,3 +42,6 @@ rsconnect/
 # Data files
 *.xlsx
 Social+touch+in+a+pandemic*
+
+# Figures
+Figures/*
