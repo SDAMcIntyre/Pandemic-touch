@@ -4,10 +4,11 @@ library(stringr)
 library(summarytools)
 library(readr)
 source("combine_variables.R")
+source("reorder_ordinals.R")
 
 data.file <- "./Social+touch+in+a+pandemic_June+8,+2021_21.33.csv"
 
-raw.data <- read_csv(data.file, col_names = FALSE, skip = 3, na = '-99') %>% 
+raw.data <- read_csv(data.file, col_names = FALSE, skip = 3, na = c('','NA','-99')) %>% 
   setNames( read_csv(data.file, col_names = FALSE, n_max = 1) %>% unlist ) 
 
 # get nicer column names from file
@@ -15,10 +16,10 @@ colnames.file <- './Social_touch_column_names_key.csv'
 colnames.key <- read.csv2("./social_touch_column_names_key.csv", comment.char="#", header=FALSE)
 colnames(colnames.key) <- c('orig', 'long','importid', 'nice')
 
-# consent
+# tally consent
 raw.data %>% group_by(Q55) %>% tally()
 
-# problem with Q11 and Q50
+# tally problem with Q11 and Q50
 raw.data %>% 
   filter(UserLanguage == 'DA') %>% 
   mutate(beforeErrorFixed = EndDate < '2020-11-09 12:15:00') %>% 
@@ -56,22 +57,40 @@ orig_colnames <- data.frame(orig = colnames(raw.data))
 colnames_matched <- left_join(orig_colnames, colnames.key)
 colnames(raw.data) <- colnames_matched$nice
 
-# completed
+# tally completed
 raw.data %>% group_by(Finished) %>% tally()
 
 # apply filters/changes to data  
-raw.data %>% 
+processed.data <- raw.data %>% 
   filter(Consent == 'yes') %>% # gave consent
   filter(Finished) %>% # completed the survey
-  mutate(across(
-    .cols = starts_with(c('Soc. Dist. Past Week','Would Do Activity')),
-    .fns = ~ if_else( `User Language` == 'DA' &  `End Date` < '2020-11-09 12:15:00',
+  mutate(
+    
+    # fix issue with early Danish survey
+    across(
+      .cols = starts_with(c('Soc. Dist. Past Week','Would Do Activity')),
+      .fns = ~ if_else( `User Language` == 'DA' &  `End Date` < '2020-11-09 12:15:00',
                       NA_real_, .x)
-      )) %>%
-  mutate(Age = format(`End Date`, format='%Y') %>% parse_number - `Year of Birth`) %>% 
-  rename(
+      ),
+    
+    # calculate age
+    Age = format(`End Date`, format='%Y') %>% parse_number - `Year of Birth`,
+    
+    # collapse n. cohabiting
+    `Number Cohabiting` = if_else(
+      `Number Cohabiting` == '4' | `Number Cohabiting` == '5' | `Number Cohabiting` == 'More than 5',
+      'More than 3', `Number Cohabiting`)
+    
     ) %>% 
   # remove uninteresting variables
   select(-c(`Response Type`, Progress, Finished, `Recorded Date`, `Response ID`,
-            `Distribution Channel`, Consent, `Year of Birth`)) %>% 
+            `Distribution Channel`, Consent, `Year of Birth`)) 
+
+
+# summary table (html)
+processed.data %>% 
+  reorder_ordinals() %>% 
   dfSummary %>% view
+
+processed.data %>% 
+  write_csv( str_replace(data.file, "\\.csv", "_processed\\.csv") )

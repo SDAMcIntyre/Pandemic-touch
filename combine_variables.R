@@ -9,7 +9,7 @@ merge_questions_touch <- function(dataframe, names_of_cols, n_questions){
     var_1 <- paste0(names_of_cols[1],'_', i+1)
     var_2 <- paste0(names_of_cols[2],'_', i)
     dataframe <- dataframe %>%
-      mutate("{var_1}":= ifelse(get(var_1) == "", get(var_2), get(var_1))) %>% 
+      mutate("{var_1}":= ifelse(get(var_1) == "" | is.na(get(var_1)), get(var_2), get(var_1))) %>% 
       select(-var_2)
   }
   return(dataframe)
