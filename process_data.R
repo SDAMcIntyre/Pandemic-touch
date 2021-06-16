@@ -5,7 +5,7 @@ library(summarytools)
 library(readr)
 source("combine_variables.R")
 
-data.file <- "../Social+touch+in+a+pandemic_June+8,+2021_21.33.csv"
+data.file <- "./Social+touch+in+a+pandemic_June+8,+2021_21.33.csv"
 
 raw.data <- read_csv(data.file, col_names = FALSE, skip = 3, na = '-99') %>% 
   setNames( read_csv(data.file, col_names = FALSE, n_max = 1) %>% unlist ) 

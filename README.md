@@ -22,6 +22,10 @@ Q27 scale: no!, no, more or less, yes, yes!
 
 ## Data processing steps
 
+- merge country of residence questions 
+
+- merge duplicate questions for those living alone/not alone
+
 - exclude those who did not give consent (7 excluded)
 
 - exclude those who did not finish the survey (168 exlcuded, too strict?)
@@ -31,10 +35,6 @@ Q27 scale: no!, no, more or less, yes, yes!
 - calculate age from year of birth and survey completion year
 
 ### To do
-
-- translate and merge country of residence questions
-
-- merge duplicate questions for those living alone/not alone
 
 - recode ordinal scales as factors with the correct order
 

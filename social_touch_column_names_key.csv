@@ -20,7 +20,7 @@ Q55;"1.   I understand that my participation is voluntary and that I am free to 
 4.  I agree to take part in the above study, and by continuing with the task I acknowledge that I am formally agreeing to this.";"{""ImportId"":""QID55""}";Consent
 Q5;What year were you born?;"{""ImportId"":""QID3_TEXT""}";Year of Birth
 Q1;What gender do you identify as?;"{""ImportId"":""QID1""}";Gender
-Q3;List of Countries;"{""ImportId"":""QID2""}";Residence (English)
+Q3;List of Countries;"{""ImportId"":""QID2""}";Residence
 Q62;Hvilket land er du for tiden bosatt i?;"{""ImportId"":""QID62""}";Residence (Norwegian)
 Q56;MissÌ_ maassa asut nyt?;"{""ImportId"":""QID56""}";Residence (Finnish)
 Q59;Vilket land Ì_r du fÌ¦r nÌ_rvarande bosatt i?;"{""ImportId"":""QID59""}";Residence (Swedish)
@@ -53,23 +53,23 @@ Q20_1;How much touch have you had in the past week? Please select the option whi
 Q20_2;How much touch have you had in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID18_3""}";Had Touch Stranger 1
 Q20_3;How much touch have you had in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID18_4""}";Had Touch Professional 1
 Q65_1;How much touch have you had in the past week? Please select the option which best matches your situation. - From someone you live with;"{""ImportId"":""QID65_1""}";Had Touch Cohabitant
-Q65_2;How much touch have you had in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID65_2""}";Had Touch Someone Close 2
-Q65_3;How much touch have you had in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID65_3""}";Had Touch Stranger 2
-Q65_4;How much touch have you had in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID65_4""}";Had Touch Professional 2
+Q65_2;How much touch have you had in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID65_2""}";Had Touch Someone Close
+Q65_3;How much touch have you had in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID65_3""}";Had Touch Stranger
+Q65_4;How much touch have you had in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID65_4""}";Had Touch Professional
 Q21_1;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID19_2""}";Wanted Touch Someone Close 1
 Q21_2;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID19_3""}";Wanted Touch Stranger 1
 Q21_3;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID19_4""}";Wanted Touch Professional 1
 Q66_1;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone you live with;"{""ImportId"":""QID66_1""}";Wanted Touch Cohabitant
-Q66_2;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID66_2""}";Wanted Touch Someone Close 2
-Q66_3;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID66_3""}";Wanted Touch Stranger 2
-Q66_4;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID66_4""}";Wanted Touch Professional 2
+Q66_2;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID66_2""}";Wanted Touch Someone Close
+Q66_3;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - Someone you don't know;"{""ImportId"":""QID66_3""}";Wanted Touch Stranger
+Q66_4;How much touch would you have liked to have received in the past week? Please select the option which best matches your situation. - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID66_4""}";Wanted Touch Professional
 Q22_1;On a typical week prior to the current pandemic, how much touch would you have received? - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID20_2""}";Typical Touch Someone Close 1
 Q22_2;On a typical week prior to the current pandemic, how much touch would you have received? - Someone you don't know;"{""ImportId"":""QID20_3""}";Typical Touch Stranger 1
 Q22_3;On a typical week prior to the current pandemic, how much touch would you have received? - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID20_4""}";Typical Touch Professional 1
 Q67_1;On a typical week prior to the current pandemic, how much touch would you have received? - From someone you live with;"{""ImportId"":""QID67_1""}";Typical Touch Cohabitant
-Q67_2;On a typical week prior to the current pandemic, how much touch would you have received? - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID67_2""}";Typical Touch Someone Close 2
-Q67_3;On a typical week prior to the current pandemic, how much touch would you have received? - Someone you don't know;"{""ImportId"":""QID67_3""}";Typical Touch Stranger 2
-Q67_4;On a typical week prior to the current pandemic, how much touch would you have received? - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID67_4""}";Typical Touch Professional 2
+Q67_2;On a typical week prior to the current pandemic, how much touch would you have received? - From someone close to you but who you do not live with (e.g. friend, extended family member);"{""ImportId"":""QID67_2""}";Typical Touch Someone Close
+Q67_3;On a typical week prior to the current pandemic, how much touch would you have received? - Someone you don't know;"{""ImportId"":""QID67_3""}";Typical Touch Stranger
+Q67_4;On a typical week prior to the current pandemic, how much touch would you have received? - A professional (e.g. hairdresser, masseuse);"{""ImportId"":""QID67_4""}";Typical Touch Professional
 Q49_4;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
  Please move the slider on the line to the point that best corresponds to your opinion. - Go for a walk outside, just the two of you";"{""ImportId"":""QID49_4""}";Want Activity Walk
 Q49_5;"A friend of yours invites you to join them for an activity in the upcoming week. How much would you like to do the following with a friend or a loved one (assuming it was possible)? 
@@ -142,9 +142,9 @@ they apply to your situation, the
 way you feel now. - There are enough people I feel close to";"{""ImportId"":""QID25_6""}";Feel Close People
 Q26_1;Over the past week, how would you judge your physical and mental health? - Physical health;"{""ImportId"":""QID24_1""}";Physical Health
 Q26_2;Over the past week, how would you judge your physical and mental health? - mental health;"{""ImportId"":""QID24_2""}";Mental Health
-Q45_1;How worried are you... - about getting COVID-19?;"{""ImportId"":""QID45_1""}";Worried Getting COVID19 1
+Q45_1;How worried are you... - about getting COVID-19?;"{""ImportId"":""QID45_1""}";Worried Getting COVID19
 Q45_2;How worried are you... - about someone you live with getting COVID-19?;"{""ImportId"":""QID45_2""}";Worried Cohabitant COVID19
-Q45_3;How worried are you... - about transmitting COVID-19 to someone?;"{""ImportId"":""QID45_3""}";Worried Transmitting COVID19 1
+Q45_3;How worried are you... - about transmitting COVID-19 to someone?;"{""ImportId"":""QID45_3""}";Worried Transmitting COVID19
 Q63_1;How worried are you... - about getting COVID-19?;"{""ImportId"":""QID63_1""}";Worried Getting COVID19 2
 Q63_3;How worried are you... - about transmitting COVID-19 to someone?;"{""ImportId"":""QID63_3""}";Worried Transmitting COVID19 2
 Q30_1;At the moment, how much would you like it if any of these people who live with you touched you in this way? (Please imagine a person if one does not exist) - Your partner/spouse;"{""ImportId"":""QID28_1""}";Touch Attention Cohab Partner
