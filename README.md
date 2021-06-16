@@ -43,15 +43,16 @@ Q27 scale: no!, no, more or less, yes, yes!
 
 ### To do
 
-- recode more ordinal scales as factors with the correct order
+- recode more ordinal scales as factors with the correct order (in reorder_ordinals.R)
 
 - do something with free-text options
 
 ## Analysis 
-Planned analyses: https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit 
 
 - analysis_cohabitation-and-wanting-touch.R: Individuals living alone during lockdowns will be more lonely and touch-hungry than those living with others (but may also be experiencing less unwanted touch)
 
+- analysis_cohabitation-and-wanting-touch.R: video-related questions (especially live alone / with someone comparisons, but also others)
+
 ### To do
 
-- video-related questions (especially live alone / with someone comparisons, but also others)
+Planned analyses: https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit 

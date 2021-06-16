@@ -31,15 +31,21 @@ pandemic.data %>%
 # ggsave('Figures/cohabitation-and-wanting-touch.png')
 
 
+kruskal.test(`Wanted Touch Someone Close` ~ `Number Cohabiting`, data = pandemic.data)
+kruskal.test(`Wanted Touch Professional` ~ `Number Cohabiting`, data = pandemic.data)
+kruskal.test(`Wanted Touch Stranger` ~ `Number Cohabiting`, data = pandemic.data)
+
 alone.data <- pandemic.data %>% 
   filter(!is.na(`Number Cohabiting`)) %>% 
-  mutate(`Lives Alone` = if_else(`Number Cohabiting` == 'I live alone', TRUE, FALSE) ) %>% 
+  mutate(`Lives Alone` = if_else(`Number Cohabiting` == 'I live alone', TRUE, FALSE),
+         across(.cols = starts_with('Wanted Touch'),
+                .fns = ~ as.numeric(.x))
+         ) %>% 
   select(starts_with(c('Lives Alone', 'Wanted Touch'))) 
 
-# Pearson's chi-square test of equal distributions
-chisq.test(alone.data$`Lives Alone`, alone.data$`Wanted Touch Someone Close`)
-chisq.test(alone.data$`Lives Alone`, alone.data$`Wanted Touch Professional`)
-chisq.test(alone.data$`Lives Alone`, alone.data$`Wanted Touch Stranger`)
+wilcox.test(`Wanted Touch Someone Close` ~ `Lives Alone`, data = alone.data, conf.int = TRUE)
+wilcox.test(`Wanted Touch Professional` ~ `Lives Alone`, data = alone.data, conf.int = TRUE)
+wilcox.test(`Wanted Touch Stranger` ~ `Lives Alone`, data = alone.data, conf.int = TRUE)
 
 # table with counts and percentages
 alone.data %>% 
@@ -48,6 +54,8 @@ alone.data %>%
   adorn_percentages('col') %>% 
   adorn_pct_formatting() %>% 
   adorn_ns()
+
+
 
 #### Cohabiting & had touch ####
 
