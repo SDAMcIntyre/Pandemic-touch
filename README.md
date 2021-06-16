@@ -39,6 +39,7 @@ Q27 scale: no!, no, more or less, yes, yes!
 - recode ordinal scales as factors with the correct order
     + Number Cohabiting
     + Wanted Touch ...
+    + Touch video variables
 
 ### To do
 
