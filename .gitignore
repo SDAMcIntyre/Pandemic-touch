@@ -38,4 +38,7 @@ rsconnect/
 
 # MacOS system files
 *.DS_Store
+
+# Data files
 *.xlsx
+Social+touch+in+a+pandemic*
