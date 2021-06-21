@@ -8,8 +8,8 @@ source("reorder_ordinals.R")
 
 pandemic.data <- read_csv("../Social+touch+in+a+pandemic_June+8,+2021_21.33_processed.csv") %>% 
   reorder_ordinals() %>% 
-  mutate(tempID = sample(1:n(), n()))
-
+  mutate(tempID = sample(1:n(), n())) %>% 
+  mutate(`Lives Alone` = if_else(`Number Cohabiting` == 'I live alone', 'alone', 'with others'))
 
 #### Cohabiting & wanting touch ####
 
@@ -37,8 +37,7 @@ kruskal.test(`Wanted Touch Stranger` ~ `Number Cohabiting`, data = pandemic.data
 
 alone.data <- pandemic.data %>% 
   filter(!is.na(`Number Cohabiting`)) %>% 
-  mutate(`Lives Alone` = if_else(`Number Cohabiting` == 'I live alone', TRUE, FALSE),
-         across(.cols = starts_with('Wanted Touch'),
+  mutate(across(.cols = starts_with('Wanted Touch'),
                 .fns = ~ as.numeric(.x))
          ) %>% 
   select(starts_with(c('Lives Alone', 'Wanted Touch'))) 
@@ -157,19 +156,26 @@ plot(want.vs.had$diff_close, want.vs.had$diff_cohabitant)
 #### Cohabiting and wanting video touch ####
 
 video.data <- pandemic.data %>% 
-  select(starts_with(c('Number Cohabiting', 'Touch')), -c('Touch Order')) %>% 
-  mutate(tempID = sample(1:n(), n())) %>% 
+  select(starts_with(c('Response ID','Number Cohabiting', 'Lives Alone', 'Touch')), -c('Touch Order')) %>% 
   pivot_longer(cols = starts_with('Touch'),
                names_to = c('Touch Message', 'Cohabiting', 'Touched by'),
                names_pattern = 'Touch (.*) (.*) (.*)', 
                values_to = 'Response') %>% 
   na.omit() %>% 
   mutate(`Touched by` = factor(`Touched by`, levels = c('Partner',
-                                                        'Family',
-                                                        'Friend', 
                                                         'Child',
+                                                        'Friend', 
+                                                        'Family',
                                                         'Acquaintance',
-                                                        'Stranger')))
+                                                        'Stranger')),
+         `Would like` = case_when(Response == 'I would dislike it' ~ -1L,
+                                  Response == 'I don\'t mind' ~ 0L,
+                                  Response == 'I would like it' ~ 1L,
+                                  Response == 'I don\'t know / not applicable' ~ NA_integer_),
+         Cohabiting = case_when(Cohabiting == 'Cohab' ~ 'cohabitant',
+                                Cohabiting == 'Non-Cohab' ~ 'non-cohabitant')
+  )
+
 quartz(15,10); plot(1:10)
 video.data %>%
   filter(`Touch Message` == 'Attention') %>% 
@@ -255,4 +261,47 @@ video.data %>%
 
 ggsave('Figures/cohabitation-and-video-touch-Gratitude.svg')
 ggsave('Figures/cohabitation-and-video-touch-Gratitude.png')
+
+
+##### don't know / not applicable #####
+
+video.data %>% 
+  mutate(DKNA = if_else(Response == 'I don\'t know / not applicable', TRUE, FALSE)) %>% 
+  group_by(`Touch Message`, `Touched by`, Cohabiting, `Lives Alone`, DKNA) %>% 
+  summarise(n = n()) %>% 
+  group_by(`Touch Message`, `Touched by`, Cohabiting, `Lives Alone`) %>% 
+  mutate(Total = sum(n)) %>% 
+  filter(DKNA) %>% 
+  mutate(`Proportion don't know / not applicable` = n/Total) %>% 
+  ungroup() %>% 
+  ggplot(aes(x = `Touched by`, y = `Proportion don't know / not applicable`, 
+             fill = `Lives Alone`, alpha = Cohabiting)) +
+  facet_wrap( ~ `Touch Message`) +
+  geom_bar(stat = 'identity', position = position_dodge()) +
+  scale_alpha_discrete(range = c(0.5,1)) +
+  theme_bw(base_size = 14) +
+  theme(axis.text.x=element_text(angle=45, hjust = 1)) +
+  labs(title = 'Don\'t know / not applicable response rates')
+
+ggsave('Figures/cohabitation-and-video-touch-DKNA.svg')
+ggsave('Figures/cohabitation-and-video-touch-DKNA.png')
+
+##### re-coded video wanting variable #####
+
+quartz(15,10); plot(1:10)
+
+video.data %>% 
+  ggplot(aes(x = `Touched by`, y = `Would like`, colour = `Lives Alone`, linetype = Cohabiting)) +
+  facet_wrap(~ `Touch Message`) +
+  stat_summary(geom = 'point', fun = 'mean', position = position_dodge(0.3)) +
+  stat_summary(geom = 'errorbar', fun.data = 'mean_cl_boot', 
+               width = 0.3, position = position_dodge(0.3)) +
+  theme_bw(base_size = 14) +
+  theme(axis.text.x=element_text(angle=45, hjust = 1),
+        legend.position = 'bottom') +
+  labs(title = 'Response to touch videos, by \"message\" being communicated.',
+       colour = 'Respondent \nlives...', linetype = 'Imagined \ntoucher is a...')
+
+ggsave('Figures/cohabitation-and-video-touch-All.svg')
+ggsave('Figures/cohabitation-and-video-touch-All.png')
 

@@ -35,10 +35,7 @@ raw.data <- raw.data %>%
 
 # Fix country names
 raw.data <- raw.data %>% 
-  mutate(Q3 = ifelse(!is.na(Q56), Q56, 
-                     ifelse(!is.na(Q59), Q59, 
-                            ifelse(!is.na(Q62), Q62, 
-                                   ifelse(!is.na(Q64), Q64, Q3))))) %>% 
+  mutate(Q3 = coalesce(Q3, Q56, Q59, Q62, Q64)) %>% 
   # modify Finnish country names
   mutate(Q3 = ifelse(Q3=='Suomi', 'Finland', Q3)) %>% 
   mutate(Q3 = ifelse(Q3=='Saksa', 'Germany', Q3)) %>% 
@@ -83,13 +80,14 @@ processed.data <- raw.data %>%
     
     ) %>% 
   # remove uninteresting variables
-  select(-c(`Response Type`, Progress, Finished, `Recorded Date`, `Response ID`,
+  select(-c(`Response Type`, Progress, Finished, `Recorded Date`, 
             `Distribution Channel`, Consent, `Year of Birth`)) 
 
 
 # summary table (html)
 processed.data %>% 
   reorder_ordinals() %>% 
+  select(-c(`Response ID`)) %>% 
   dfSummary %>% view
 
 processed.data %>% 

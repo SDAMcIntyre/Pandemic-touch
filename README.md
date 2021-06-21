@@ -49,10 +49,23 @@ Q27 scale: no!, no, more or less, yes, yes!
 
 ## Analysis 
 
-- analysis_cohabitation-and-wanting-touch.R: Individuals living alone during lockdowns will be more lonely and touch-hungry than those living with others (but may also be experiencing less unwanted touch)
+- analysis_cohabitation-and-wanting-touch.R: 
+  + Individuals living alone during lockdowns will be more lonely and touch-hungry than those living with others (but may also be experiencing less unwanted touch)
+  + video related questions, re-code to -1, 0, 1 (dislike, don't mind, like), compare living alone vs. not
 
-- analysis_cohabitation-and-wanting-touch.R: video-related questions (especially live alone / with someone comparisons, but also others)
 
 ### To do
+
+- Nice participant demographics
+  + gender
+  + age
+  + language
+  + residence
+  + household
+  + pets
+
+- video responses
+  + split by who people are living with, e.g. with partner only
+
 
 Planned analyses: https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit 
