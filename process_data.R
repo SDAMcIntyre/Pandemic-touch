@@ -83,13 +83,14 @@ processed.data <- raw.data %>%
     
     ) %>% 
   # remove uninteresting variables
-  select(-c(`Response Type`, Progress, Finished, `Recorded Date`, `Response ID`,
+  select(-c(`Response Type`, Progress, Finished, `Recorded Date`, 
             `Distribution Channel`, Consent, `Year of Birth`)) 
 
 
 # summary table (html)
 processed.data %>% 
   reorder_ordinals() %>% 
+  select(-c(`Response ID`)) %>% 
   dfSummary %>% view
 
 processed.data %>% 
