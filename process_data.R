@@ -6,7 +6,7 @@ library(readr)
 source("combine_variables.R")
 source("reorder_ordinals.R")
 
-data.file <- "./Social+touch+in+a+pandemic_June+8,+2021_21.33.csv"
+data.file <- "../Social+touch+in+a+pandemic_June+8,+2021_21.33.csv"
 
 raw.data <- read_csv(data.file, col_names = FALSE, skip = 3, na = c('','NA','-99')) %>% 
   setNames( read_csv(data.file, col_names = FALSE, n_max = 1) %>% unlist ) 
@@ -35,10 +35,10 @@ raw.data <- raw.data %>%
 
 # Fix country names
 raw.data <- raw.data %>% 
-  mutate(Q3 = ifelse(Q56!="", Q56, 
-                     ifelse(Q59 != "", Q59, 
-                            ifelse(Q62 != "", Q62, 
-                                   ifelse(Q64!= "", Q64, Q3))))) %>% 
+  mutate(Q3 = ifelse(!is.na(Q56), Q56, 
+                     ifelse(!is.na(Q59), Q59, 
+                            ifelse(!is.na(Q62), Q62, 
+                                   ifelse(!is.na(Q64), Q64, Q3))))) %>% 
   # modify Finnish country names
   mutate(Q3 = ifelse(Q3=='Suomi', 'Finland', Q3)) %>% 
   mutate(Q3 = ifelse(Q3=='Saksa', 'Germany', Q3)) %>% 
