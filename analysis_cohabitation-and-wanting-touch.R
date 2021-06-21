@@ -81,8 +81,7 @@ pandemic.data %>%
 #### Cohabiting and wanting video touch ####
 
 video.data <- pandemic.data %>% 
-  select(starts_with(c('Number Cohabiting', 'Touch')), -c('Touch Order')) %>% 
-  mutate(tempID = sample(1:n(), n())) %>% 
+  select(starts_with(c('Response ID','Number Cohabiting', 'Touch')), -c('Touch Order')) %>% 
   pivot_longer(cols = starts_with('Touch'),
                names_to = c('Touch Message', 'Cohabiting', 'Touched by'),
                names_pattern = 'Touch (.*) (.*) (.*)', 
