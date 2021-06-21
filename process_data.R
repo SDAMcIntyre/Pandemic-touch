@@ -35,10 +35,7 @@ raw.data <- raw.data %>%
 
 # Fix country names
 raw.data <- raw.data %>% 
-  mutate(Q3 = ifelse(Q56!="", Q56, 
-                     ifelse(Q59 != "", Q59, 
-                            ifelse(Q62 != "", Q62, 
-                                   ifelse(Q64!= "", Q64, Q3))))) %>% 
+  mutate(Q3 = coalesce(Q3, Q56, Q59, Q62, Q64)) %>% 
   # modify Finnish country names
   mutate(Q3 = ifelse(Q3=='Suomi', 'Finland', Q3)) %>% 
   mutate(Q3 = ifelse(Q3=='Saksa', 'Germany', Q3)) %>% 
