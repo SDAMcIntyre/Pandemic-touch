@@ -55,4 +55,18 @@ Q27 scale: no!, no, more or less, yes, yes!
 
 ### To do
 
+- Nice participant demographics
+  + gender
+  + age
+  + language
+  + residence
+  + household
+  + pets
+
+- video responses
+  + re-code to -1, 0, 1 (dislike, don't mind, like)
+  + compare living alone vs. not
+
+- split by who people are living with, e.g. with partner only
+
 Planned analyses: https://docs.google.com/document/d/12VXfi6zQshHtaW3PI8TcdygAFz4hHToMb_zJvOmUaFc/edit 
