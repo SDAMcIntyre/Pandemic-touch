@@ -6,7 +6,7 @@ library(svglite)
 library(janitor)
 source("reorder_ordinals.R")
 
-pandemic.data <- read_csv("../Social+touch+in+a+pandemic_June+8,+2021_21.33_processed.csv") %>% 
+pandemic.data <- read_csv("Social+touch+in+a+pandemic_June+8,+2021_21.33_processed.csv") %>% 
   reorder_ordinals() %>% 
   mutate(tempID = sample(1:n(), n()))
 
@@ -45,7 +45,7 @@ bar.chart.data.want %>%
         axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
-ggsave('../Figures/wanting_touch_stacked_bar.png')
+ggsave('Figures/wanting_touch_stacked_bar.png')
 
 bar.chart.data.want %>% 
   mutate(`Lives Alone` = factor(`Lives Alone`, levels=c(TRUE, FALSE), labels = c('Alone', 'With others'))) %>% 
@@ -71,8 +71,8 @@ bar.chart.data.want %>%
         axis.text.x = element_text(angle=45, hjust=1, vjust=0.7,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
-ggsave('../Figures/wanting_touch_stacked_bar_by_living_status.png')
 
+ggsave('Figures/wanting_touch_stacked_bar_by_living_status.png')
 
 
 bar.chart.data.had <- pandemic.data %>% 
@@ -102,7 +102,7 @@ bar.chart.data.had %>%
         axis.title.x = element_blank(),
         axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
-ggsave('../Figures/had_touch_stacked_bar.png')
+ggsave('Figures/had_touch_stacked_bar.png')
 
 bar.chart.data.had %>% 
   mutate(`Lives Alone` = factor(`Lives Alone`, levels=c(TRUE, FALSE), labels = c('Alone', 'With others'))) %>% 
@@ -124,7 +124,7 @@ bar.chart.data.had %>%
         axis.text.x = element_text(angle=60, hjust=1, vjust=0.7,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
-ggsave('../Figures/had_touch_stacked_bar_by_living_status.png')
+ggsave('Figures/had_touch_stacked_bar_by_living_status.png')
 
 ## typical touch
 
@@ -158,7 +158,7 @@ bar.chart.data.typical %>%
         axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
-ggsave('../Figures/typical_touch_stacked_bar.png')
+ggsave('Figures/typical_touch_stacked_bar.png')
 
 bar.chart.data.typical%>% 
   mutate(`Lives Alone` = factor(`Lives Alone`, levels=c(TRUE, FALSE), labels = c('Alone', 'With others'))) %>% 
@@ -180,7 +180,7 @@ bar.chart.data.typical%>%
         axis.text.x = element_text(angle=60, hjust=1, vjust=0.7,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
-ggsave('../Figures/had_touch_stacked_bar_by_living_status.png')
+ggsave('Figures/had_touch_stacked_bar_by_living_status.png')
 
 comparison_data <- bar.chart.data.had %>% rename(had_touch = Response) %>% 
   left_join(bar.chart.data.want %>% rename(want_touch = Response), 
