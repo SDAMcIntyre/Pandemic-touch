@@ -179,9 +179,106 @@ pivot_longer(cols=c(had_touch, want_touch, typical_touch), names_to='category', 
 
 # by age ####
 
+pandemic.data <- pandemic.data %>% 
+  mutate(
+    `Age Group` = case_when(
+      between(Age, 18, 25) ~ "18-25",
+      between(Age, 26, 35) ~ "26-35",
+      between(Age, 36, 45) ~ "36-45",
+      between(Age, 46, 55) ~ "46-55",
+      between(Age, 56, 65) ~ "56-65",
+      between(Age, 66, 81) ~ "66-81"
+    ))
+
+pandemic.data %>% 
+  ggplot() +
+  geom_bar(aes(x = `Age Group`))
+  
 ## wanted ####
 
+bar.chart.data.age.want <- pandemic.data %>% 
+  filter(!is.na(Age)) %>% 
+  select(starts_with(c('tempID','Number Cohabiting', 'Wanted Touch', "Age Group"))) %>%  #c('Wanted Touch', 'Had Touch', 'Typical Touch')
+  pivot_longer(cols = starts_with('Wanted Touch'),  names_prefix = 'Wanted Touch ',
+               names_to = 'Wanted Touch From', values_to = 'Response') %>% 
+  mutate(`Wanted Touch From` = factor(`Wanted Touch From`, levels=c('Cohabitant', 'Someone Close', 'Professional','Stranger'))) %>% 
+  na.omit() %>% 
+  filter(!is.na(`Number Cohabiting`)) %>% 
+  mutate(`Lives Alone` = if_else(`Number Cohabiting` == 'I live alone', TRUE, FALSE))
+
+bar.chart.data.age.want %>% 
+  ggplot(aes(x=`Age Group`, fill=Response)) + 
+  facet_wrap(. ~ `Wanted Touch From` , ncol = 1) +
+  geom_bar(position='fill') + 
+  scale_fill_manual(values=custom_colors,
+                    guide = guide_legend(reverse=TRUE),
+                    name = 'How much touch would you \nhave liked to have received \nin the past week?') + 
+  scale_y_reverse('Proportion of responses', 
+                  breaks = c(0, 0.5, 1), 
+                  labels = c('100%', '50%', '0%')) + 
+  scale_x_discrete(position = 'top') +
+  theme_barchart_no_x
+
+ggsave('Figures/age_wanting_touch_stacked_bar.png')
+
+bar.chart.data.age.want %>% 
+  mutate(`Lives Alone` = factor(`Lives Alone`, levels=c(TRUE, FALSE), labels = c('Alone', 'With others'))) %>% 
+  ggplot(aes(x=`Age Group`, fill=Response)) + 
+  facet_grid(`Lives Alone` ~ `Wanted Touch From`) +
+  geom_bar(position='fill', width = 0.9) + 
+  scale_fill_manual(values=custom_colors,
+                    guide = guide_legend(reverse=TRUE),
+                    name = 'How much touch would you \nhave liked to have received \nin the past week?') + 
+  scale_y_reverse('Proportion of responses', 
+                  breaks = c(0, 0.5, 1), 
+                  labels = c('100%', '50%', '0%')) + 
+  #xlab('Living situation') +
+  #facet_grid(~`Wanted Touch From`) + 
+  #ggtitle('Wanted touch in the past week') +
+  theme_barchart_x45
+
+ggsave('Figures/wanting_touch_stacked_bar_by_living_status.png')
+
 ## had ####
+
+bar.chart.data.had <- pandemic.data %>% 
+  select(starts_with(c('tempID','Number Cohabiting', 'Had Touch'))) %>%  #c('Wanted Touch', 'Had Touch', 'Typical Touch')
+  pivot_longer(cols = starts_with('Had Touch'),  names_prefix = 'Had Touch ',
+               names_to = 'Had Touch From', values_to = 'Response') %>% 
+  mutate(`Had Touch From` = factor(`Had Touch From`, levels=c('Cohabitant', 'Someone Close', 'Professional','Stranger'))) %>% 
+  na.omit() %>% 
+  filter(!is.na(`Number Cohabiting`)) %>% 
+  mutate(`Lives Alone` = if_else(`Number Cohabiting` == 'I live alone', TRUE, FALSE))
+
+bar.chart.data.had %>% 
+  ggplot(aes(x=`Had Touch From`, fill=Response)) + 
+  geom_bar(position='fill') + 
+  scale_fill_manual(values=custom_colors,
+                    guide = guide_legend(reverse=TRUE),
+                    name = 'How much touch have you \nhad in the past week? ') + 
+  scale_y_reverse('Proportion of responses', 
+                  breaks = c(0, 0.5, 1), 
+                  labels = c('100%', '50%', '0%')) + 
+  scale_x_discrete(position = 'top') +
+  theme_barchart_no_x
+
+ggsave('Figures/had_touch_stacked_bar.png')
+
+bar.chart.data.had %>% 
+  mutate(`Lives Alone` = factor(`Lives Alone`, levels=c(TRUE, FALSE), labels = c('Alone', 'With others'))) %>% 
+  ggplot(aes(x=`Lives Alone`, fill=Response)) + 
+  geom_bar(position='fill', width = 0.9) + 
+  scale_fill_manual(values=custom_colors,
+                    guide = guide_legend(reverse=TRUE),
+                    name = 'How much touch have you \nhad in the past week? ') + 
+  scale_y_reverse('Proportion of responses', 
+                  breaks = c(0, 0.5, 1), 
+                  labels = c('100%', '50%', '0%')) + 
+  facet_grid(~`Had Touch From`) + 
+  theme_barchart_x60
+
+ggsave('Figures/had_touch_stacked_bar_by_living_status.png')
+
 
 # All subs ####
 
