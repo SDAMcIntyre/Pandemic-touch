@@ -14,8 +14,10 @@ pandemic.data <- read_csv("Social+touch+in+a+pandemic_June+8,+2021_21.33_process
 # plot stacked bar
 ###
 
-
+# plot appearance ####
 custom_colors <- c('#C0C0C0', scales::brewer_pal(type='div', palette='RdPu')(5))
+
+# wanted ####
 
 bar.chart.data.want <- pandemic.data %>% 
   select(starts_with(c('tempID','Number Cohabiting', 'Wanted Touch'))) %>%  #c('Wanted Touch', 'Had Touch', 'Typical Touch')
@@ -74,6 +76,7 @@ bar.chart.data.want %>%
 
 ggsave('Figures/wanting_touch_stacked_bar_by_living_status.png')
 
+# had ####
 
 bar.chart.data.had <- pandemic.data %>% 
   select(starts_with(c('tempID','Number Cohabiting', 'Had Touch'))) %>%  #c('Wanted Touch', 'Had Touch', 'Typical Touch')
@@ -126,7 +129,7 @@ bar.chart.data.had %>%
 
 ggsave('Figures/had_touch_stacked_bar_by_living_status.png')
 
-## typical touch
+# typical touch ####
 
 bar.chart.data.typical <- pandemic.data %>% 
   select(starts_with(c('tempID','Number Cohabiting', 'Typical Touch'))) %>%  #c('Wanted Touch', 'Had Touch', 'Typical Touch')
@@ -189,7 +192,14 @@ comparison_data <- bar.chart.data.had %>% rename(had_touch = Response) %>%
             by=c("tempID",  "Lives Alone", "Had Touch From"="Typical Touch From", "Number Cohabiting")) #%>% 
 pivot_longer(cols=c(had_touch, want_touch, typical_touch), names_to='category', values_to='response')
 
-### All subs
+
+# by age ####
+
+## wanted ####
+
+## had ####
+
+# All subs ####
 
 had_want <- comparison_data %>% #filter(category %in% c('had_touch', 'want_touch')) %>% 
   group_by(`Had Touch From`) %>% 
