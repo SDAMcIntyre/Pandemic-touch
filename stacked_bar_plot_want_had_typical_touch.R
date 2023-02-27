@@ -17,6 +17,34 @@ pandemic.data <- read_csv("Social+touch+in+a+pandemic_June+8,+2021_21.33_process
 # plot appearance ####
 custom_colors <- c('#C0C0C0', scales::brewer_pal(type='div', palette='RdPu')(5))
 
+theme_barchart_no_x <- theme_minimal() + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        text = element_text(size=16),
+        strip.text.x = element_text(size=20),
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
+                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+
+theme_barchart_x45 <- theme_minimal() + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        text = element_text(size=16),
+        strip.text.x = element_text(size=20),
+        axis.title.x = element_text(vjust=0,
+                                    margin = margin(t = 25, r = 0, b = 0, l = 0)),
+        plot.margin = margin(0, 0, 2, 0, "cm"),
+        axis.text.x = element_text(angle=45, hjust=1, vjust=0.7,
+                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+
+theme_barchart_x60 <- theme_minimal() + 
+  theme(panel.grid.major = element_blank(),
+        panel.grid.minor = element_blank(),
+        text = element_text(size=16),
+        strip.text.x = element_text(size=20),
+        axis.title.x = element_blank(),
+        axis.text.x = element_text(angle=60, hjust=1, vjust=0.7,
+                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
 # wanted ####
 
 bar.chart.data.want <- pandemic.data %>% 
@@ -38,14 +66,7 @@ bar.chart.data.want %>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   scale_x_discrete(position = 'top') +
-  theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_blank(),
-        axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+  theme_barchart_no_x
 
 ggsave('Figures/wanting_touch_stacked_bar.png')
 
@@ -62,17 +83,7 @@ bar.chart.data.want %>%
   xlab('Living situation') +
   facet_grid(~`Wanted Touch From`) + 
   #ggtitle('Wanted touch in the past week') +
-  theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_text(vjust=0,
-                                    margin = margin(t = 25, r = 0, b = 0, l = 0)),
-        plot.margin = margin(0, 0, 2, 0, "cm"),
-        axis.text.x = element_text(angle=45, hjust=1, vjust=0.7,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
-
+  theme_barchart_x45
 
 ggsave('Figures/wanting_touch_stacked_bar_by_living_status.png')
 
@@ -97,14 +108,8 @@ bar.chart.data.had %>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   scale_x_discrete(position = 'top') +
-  theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_blank(),
-        axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+  theme_barchart_no_x
+
 ggsave('Figures/had_touch_stacked_bar.png')
 
 bar.chart.data.had %>% 
@@ -118,14 +123,7 @@ bar.chart.data.had %>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   facet_grid(~`Had Touch From`) + 
-  theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_blank(),
-        axis.text.x = element_text(angle=60, hjust=1, vjust=0.7,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+  theme_barchart_x60
 
 ggsave('Figures/had_touch_stacked_bar_by_living_status.png')
 
@@ -152,14 +150,7 @@ bar.chart.data.typical %>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   scale_x_discrete(position = 'top') +
-  theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_blank(),
-        axis.text.x = element_text(hjust=0.5, vjust=0.7, size=20,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+  theme_barchart_no_x
 
 ggsave('Figures/typical_touch_stacked_bar.png')
 
@@ -174,14 +165,7 @@ bar.chart.data.typical%>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   facet_grid(~`Typical Touch From`) + 
-  theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_blank(),
-        axis.text.x = element_text(angle=60, hjust=1, vjust=0.7,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
+  theme_barchart_x60
 
 ggsave('Figures/had_touch_stacked_bar_by_living_status.png')
 
