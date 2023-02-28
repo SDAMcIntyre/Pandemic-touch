@@ -4,26 +4,17 @@ library(tidyr)
 library(ggplot2)
 library(svglite)
 library(janitor)
+library(patchwork)
 source("reorder_ordinals.R")
 
 # plot appearance ####
 custom_colors <- c(scales::brewer_pal(type='div', palette='RdPu')(3))
-theme_barchart_x45 <- theme_minimal() + 
-  theme(panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank(),
-        text = element_text(size=16),
-        strip.text.x = element_text(size=20),
-        axis.title.x = element_text(vjust=0,
-                                    margin = margin(t = 25, r = 0, b = 0, l = 0)),
-        plot.margin = margin(0, 0, 2, 0, "cm"),
-        axis.text.x = element_text(angle=45, hjust=1, vjust=0.7,
-                                   margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
 theme_barchart_x60 <- theme_minimal() + 
   theme(panel.grid.major = element_blank(),
         panel.grid.minor = element_blank(),
         text = element_text(size=16),
-        strip.text.x = element_text(size=20),
+        strip.text.x = element_text(size=18),
         axis.text.x = element_text(angle=60, hjust=1, vjust=0.7,
                                    margin = margin(t = -30, r = 00, b = 0, l = 0)))
 
@@ -98,7 +89,8 @@ touch.comparison.data %>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   theme_barchart_x60 +
-  labs(title = "Figure X.\n   Touch from...", x = "\nAge")
+  labs(title = "Figure 2.\n   Touch from...", x = "\nAge") +
+  plot_annotation(caption = "Pilot data from an online survey of social touch during the pandemic, N = 359, primarily from Nordic countries. 18-34 (n = 148), 35-50 (n = 107), 51-65 (n = 69), 66-81 (n = 35).")
   
 ggsave('Figures/had_wanted_touch_stacked_bar_by_age.png')
 
