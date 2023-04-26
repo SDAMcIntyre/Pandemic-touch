@@ -89,10 +89,14 @@ touch.comparison.data %>%
                   breaks = c(0, 0.5, 1), 
                   labels = c('100%', '50%', '0%')) + 
   theme_barchart_x60 +
-  labs(title = "Figure 2.\n   Touch from...", x = "\nAge") +
-  plot_annotation(caption = "Pilot data from an online survey of social touch during the pandemic, N = 359, primarily from Nordic countries. 18-34 (n = 148), 35-50 (n = 107), 51-65 (n = 69), 66-81 (n = 35).")
+  #labs(title = "Figure 2.\n   Touch from...", x = "\nAge") +
+  labs(title = "Touch from...", x = "\nAge") +
+  #plot_annotation(caption = "Pilot data from an online survey of social touch during the pandemic, N = 359, primarily from Nordic countries. 18-34 (n = 148), 35-50 (n = 107), 51-65 (n = 69), 66-81 (n = 35).") +
+  theme(legend.position = "bottom")
   
-ggsave('Figures/had_wanted_touch_stacked_bar_by_age.png')
+#812 x 550 pixels
+
+ggsave('Figures/had_wanted_touch_stacked_bar_by_age_v2.png', width = 812, height = 550, units = "px")
 
 touch.comparison.data %>% 
   group_by(`Age Group`, tempID) %>% 
